@@ -1,0 +1,77 @@
+:root{
+    --red:#f43434;
+    --white:#fff;
+    --gray:#ccc; 
+}
+#tasks{
+    margin: .5rem; 
+}
+
+#tasks ul{
+    list-style: none;
+}
+
+#tasks ul li{
+    position:relative; 
+    padding: 1rem;
+    background-color: #005290;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+ul li span{
+    color: var(--gray);
+    font-style: italic;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+#tasks ul li:nth-child(odd){
+    background-color: #202024;
+}
+#tasks ul li:hover{
+    background-color: #5a5a5a;
+    cursor: pointer;
+    
+}
+
+#informations{
+    display: flex;
+    align-items: center;
+}
+
+.btnUpdate{
+    font-size: 1.5rem;
+    padding: .6rem;
+    color:var(--gray);
+    transition: all .3s ease-in-out;
+
+}
+.btnUpdate:hover{
+
+    background-color: #3643f4;
+    color: var(--white);
+}
+
+.btnDelete{
+    font-size: 1.5rem;
+    padding: .6rem;
+    color:var(--gray);
+    transition: all .3s ease-in-out;
+
+}
+.btnDelete:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+

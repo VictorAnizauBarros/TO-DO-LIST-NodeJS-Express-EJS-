@@ -1,0 +1,10 @@
+/* headers */
+header{
+    background-color: #005290;
+    padding: 3rem;
+    margin: .5rem; 
+    text-align: center; 
+}
+header h1{
+    padding-bottom: 3rem;
+}

@@ -1,0 +1,113 @@
+
+:root{
+    --red:#f43434;
+    --white:#fff;
+}
+.modalHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modalHeader a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: .4s ease-in-out;
+}
+.modalHeader a:hover{
+    color: var(--red);
+}
+
+section#modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+  }
+  
+ div#card {
+    width: 30rem;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    background-color: #202024;
+  }
+  div#modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  
+  div#card h2 {
+    margin: 0;
+  }
+  
+  div#card a#close {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  div#card a#close:hover {
+    color: var(--red);
+    border-radius: 5rem;
+    padding: 0 0.3rem;
+  }
+  
+  div#card hr {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  div#card p {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  div#btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  
+  div#btns a {
+    text-decoration: none;
+    padding: .5rem;
+    width: 7rem;
+    text-align: center;
+    background-color: #ccc;
+    font-size: 1.5rem;
+  }
+  
+  div#btns a#btnNot{
+    color: #000;
+    margin-right: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  div#btns a#btnNot:hover {
+    background-color: var(--red);
+    color: var(--white);
+  }
+  
+  div#btns a#btnYes {
+    color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  div#btns a#btnYes:hover {
+    background-color: #00aa2a;
+    color: var(--white);
+  }
