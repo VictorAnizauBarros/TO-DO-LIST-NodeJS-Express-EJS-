@@ -1,0 +1,24 @@
+.message{
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message-danger{
+    background-color: rgb(245, 119, 119);
+    color: #8a0000;
+}
+
+.message-success{
+    background-color: rgb(121, 248, 159);
+    color: #008a1e;
+
+}
