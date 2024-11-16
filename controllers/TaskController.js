@@ -67,12 +67,12 @@ const getById = async (req, res) => {
       // Busca a task por ID se o método for update
       const task = await Task.findOne({ _id: req.params.id });
       // Renderiza a página index com a task e a lista de tasks
-      res.render("index", { task, taskDelete: null, tasksList,message,type });
+      res.render("index", { task, taskDelete: null, tasksList, message, type });
     } else {
       // Busca a task por ID se o método não for update
       const taskDelete = await Task.findOne({ _id: req.params.id });
       // Renderiza a página index com a task e a lista de tasks
-      res.render("index", { task: null, taskDelete, tasksList,message,type });
+      res.render("index", { task: null, taskDelete, tasksList, message, type });
     }
   } catch (error) {
     // Chama a função para lidar com erros
@@ -106,7 +106,21 @@ const deleteOneTask = async (req, res) => {
     type = "success";
     // Redireciona para a página inicial após deletar a task
     res.redirect("/");
-  } catch {
+  } catch (error) {
+    // Chama a função para lidar com erros
+    handleError(res, error);
+  }
+};
+
+const taskCheck = async (req, res) => {
+  try {
+    const task = await Task.findOne({ _id: req.params.id });
+
+    task.check = task.check ? false : true;
+
+    await Task.updateOne({ _id: req.params.id }, task);
+    res.redirect("/");
+  } catch (error) {
     // Chama a função para lidar com erros
     handleError(res, error);
   }
@@ -119,4 +133,5 @@ module.exports = {
   getById,
   updateOneTask,
   deleteOneTask,
+  taskCheck,
 };
